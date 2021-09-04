@@ -7,10 +7,11 @@ In this kata, you've to count lowercase letters in a given string and return the
 function letterCount(s){
     let obj = {};
     for (let i = 0; i < s.length; i++) {
-        if (obj.s[i] === undefined) {
-            obj.s[i] = 1;
+        let prop = s[i];
+        if (obj[prop] === undefined) {
+            obj[prop] = 1;
         } else {
-            obj.s[i] += 1;
+            obj[prop] += 1;
         }
     }
     return obj;

@@ -12,18 +12,14 @@ function spinWords(string) {
     let updatedStr = [];
     for (let i = 0; i < splitStr.length; i++) {
         if (splitStr[i].length < 5) {
-            if (updatedStr.length === 0) {
-                updatedStr.push(splitStr[i]);
-            } else {
-                updatedStr.push(" ", splitStr[i]);
-            }
+            updatedStr.length === 0
+                ? updatedStr.push(splitStr[i])
+                : updatedStr.push(" ", splitStr[i]);
         } else {
             let reversedWord = splitStr[i].split("").reverse().join("");
-            if (updatedStr.length === 0) {
-                updatedStr.push(reversedWord);
-            } else {
-                updatedStr.push(" ", reversedWord);
-            }
+            updatedStr.length === 0
+                ? updatedStr.push(reversedWord)
+                : updatedStr.push(" ", reversedWord);
         }
     }
     return updatedStr.join("");
